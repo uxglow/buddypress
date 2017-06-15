@@ -12,15 +12,16 @@ body, button, input, select, textarea{
 	font-size:14px;
 	font-family: Arial, Helvetica, sans-serif;	
 }
-
+body.buddypress.activity #buddypress a
+body.buddypress.activity .buddypress.widget a{
+	color:#0075c4;
+}
 /*--------------------------------------------------------------
 BuddyPress Buttons/Forms
 --------------------------------------------------------------*/
 
 body.buddypress.activity #buddypress .dir-search input[type=search],
 body.buddypress.activity #buddypress .dir-search input[type=text],
-body.buddypress.activity #buddypress .groups-members-search input[type=search],
-body.buddypress.activity #buddypress .groups-members-search input[type=text],
 body.buddypress.activity #buddypress .standard-form input[type=color],
 body.buddypress.activity #buddypress .standard-form input[type=date],
 body.buddypress.activity #buddypress .standard-form input[type=datetime-local],
@@ -48,8 +49,6 @@ body.buddypress.activity #buddypress .standard-form textarea {
 }
 body.buddypress.activity #buddypress .dir-search input[type=search]:focus,
 body.buddypress.activity #buddypress .dir-search input[type=text]:focus,
-body.buddypress.activity #buddypress .groups-members-search input[type=search]:focus,
-body.buddypress.activity #buddypress .groups-members-search input[type=text]:focus,
 body.buddypress.activity #buddypress .standard-form input[type=color]:focus,
 body.buddypress.activity #buddypress .standard-form input[type=date]:focus,
 body.buddypress.activity #buddypress .standard-form input[type=datetime-local]:focus,
@@ -78,14 +77,12 @@ body.buddypress.activity #buddypress input[type=button],
 body.buddypress.activity #buddypress input[type=reset],
 body.buddypress.activity #buddypress input[type=submit],
 body.buddypress.activity #buddypress ul.button-nav li a,
-a.bp-title-button,
-body.buddypress.activity #buddypress .profile #profile-edit-form .field-visibility-settings-close, 
-body.buddypress.activity #buddypress .profile #profile-edit-form .visibility-toggle-link {
+a.bp-title-button{
 	background-color: #F14E56;
 	border: 1px solid #F14E56;
 	border-radius: 4px;
 	color: #fff;
-	font-weight: bold;
+	font-weight: normal;
 	line-height: 18px;
 	font-size:12px; 
 }
@@ -260,8 +257,8 @@ body.buddypress.activity #buddypress #group-create-tabs.item-list-tabs ul > li{
 	border:0 none;
 }
 body.buddypress.activity #buddypress div#object-nav.item-list-tabs ul > li a,
+body.buddypress.activity #buddypress #group-create-tabs.item-list-tabs ul > li a{}
 body.buddypress.activity #buddypress div#object-nav.item-list-tabs ul > li span,
-body.buddypress.activity #buddypress #group-create-tabs.item-list-tabs ul > li a,
 body.buddypress.activity #buddypress #group-create-tabs.item-list-tabs ul > li span{
 	opacity:1;
 	background-color: transparent;
@@ -286,34 +283,23 @@ body.buddypress.activity #buddypress div.item-list-tabs ul li {
 	float: none;
 	margin: 0 3px 0 0;
 }
-body.buddypress.activity #buddypress div.item-list-tabs ul li a, 
-body.buddypress.activity #buddypress div.item-list-tabs ul li span {
-	border: 2px solid #f14e56;
+body.buddypress.activity #buddypress div.item-list-tabs ul li a, body.buddypress.activity #buddypress div.item-list-tabs ul li span {
+	border: 1px solid #f14e56;
 	border-radius: 4px;
 	color: #f14e56;
-	font-weight: bold;
+	font-weight: normal;
 	line-height: 24px;
 	margin: 0;
 }
-body.buddypress.activity #buddypress div.item-list-tabs ul li a span{
-	border: 1px solid #f14e56;
-	color: #fff;
-	background-color:#f14e56;		
-}
-body.buddypress.activity #buddypress div.item-list-tabs ul li a:hover span, 
-body.buddypress.activity #buddypress div.item-list-tabs ul li.current a span, 
-body.buddypress.activity #buddypress div.item-list-tabs ul li.selected a span{
-	background-color:#fff;
-	border:1px solid #fff;
-	color:#f14e56;
-}
+
 body.buddypress.activity #buddypress div.item-list-tabs ul li.current a,
 body.buddypress.activity #buddypress div.item-list-tabs ul li.selected a,
-body.buddypress.activity #buddypress div.item-list-tabs ul li a:hover {
+body.buddypress.activity #buddypress div.item-list-tabs ul li a:hover,
+body.buddypress.activity #buddypress div#object-nav.item-list-tabs ul > li a:hover,
+body.buddypress.activity #buddypress #group-create-tabs.item-list-tabs ul > li a:hover {
 	background-color:#f14e56;
 	color: #fff;
 	opacity: 1;
-	border-radius: 4px;
 }
 body.buddypress.activity #buddypress div.item-list-tabs ul li a span,
 body.buddypress.activity #buddypress div.item-list-tabs ul li.current a span,
@@ -324,11 +310,22 @@ body.buddypress.activity #buddypress div.item-list-tabs ul li.selected a span {
     margin-left: 3px;
     padding: 2px 6px;
 }
+body.buddypress.activity #buddypress div.item-list-tabs ul li a:hover span, 
+body.buddypress.activity #buddypress div.item-list-tabs ul li.current a span, 
+body.buddypress.activity #buddypress div.item-list-tabs ul li.selected a span,
+body.buddypress.activity #buddypress div#object-nav.item-list-tabs ul > li a:hover span,
+body.buddypress.activity #buddypress #group-create-tabs.item-list-tabs ul > li a:hover span{
+	background-color:#fff;
+	border:1px solid #fff;
+	color:#f14e56;
+}
 body.buddypress.activity #buddypress div.item-list-tabs ul li a span{
 		
 }
 body.buddypress.activity #buddypress div.item-list-tabs ul li.current a span,
-body.buddypress.activity #buddypress div.item-list-tabs ul li.selected a span {
+body.buddypress.activity #buddypress div.item-list-tabs ul li.selected a span, 
+body.buddypress.activity #buddypress div#object-nav.item-list-tabs ul > li.selected a span,
+body.buddypress.activity #buddypress #group-create-tabs.item-list-tabs ul > li.selected a span{
 	background-color:#fff;
 	border: 1px solid #fff;
     
@@ -398,16 +395,16 @@ body.buddypress.activity #buddypress div#subnav.item-list-tabs ul li.last {
   	width: auto;
 }
 body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li a {
-	padding: 5px 8px;
+	padding: 0px 8px;
 	font-size: 11px;
 	line-height: 21px;
-	color:#33363C;
+	color:#F14E56;
 
 }
 body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li.selected a,
 body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li.current a,
 body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li a:hover{
-	color:#E93100;	
+	color:#fff;	
 }
 body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li a span {
 	margin-left: 4px;
@@ -433,16 +430,7 @@ body.buddypress.activity #buddypress div.item-list-tabs#subnav li.groups-members
 body.buddypress.activity #buddypress div.item-list-tabs#subnav .message-search form {
 	position: relative;
 }
-/*#buddypress div.item-list-tabs#subnav li.groups-members-search input,
-body.buddypress.activity #buddypress div.item-list-tabs#subnav .message-search input {
-	height: 43px;
-REMOVED sinc v2.4border: 0;
-}*/
-/*#buddypress div.item-list-tabs#subnav li.groups-members-search input[type=submit],
-body.buddypress.activity #buddypress div.item-list-tabs#subnav .message-search input[type=submit] {
-	padding: 13px;
-	font-size: 16px;
-}*/
+
 body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li.last {
 	float: right;
 	margin: 0 0 0 15px;
@@ -489,7 +477,6 @@ body.buddypress.activity #buddypress li.groups-members-search form {
 }
 body.buddypress.activity #buddypress div.dir-search form input[type="text"]#members_search,
 body.buddypress.activity #buddypress div.dir-search input[type="text"], 
-body.buddypress.activity #buddypress li.groups-members-search input[type="text"], 
 body.buddypress.activity #buddypress div#subnav.item-list-tabs .message-search input[type="text"]{
 	border: 1px solid #ccc;
     border-top-left-radius: 4px;
@@ -621,393 +608,7 @@ body.buddypress.activity #buddypress #activity-stream .activity-content .activit
 	border: 0;	
 }
     
-/*--------------------------------------------------------------
-BuddyPress Groups Page
---------------------------------------------------------------*/
 
-/* Pagination ************************************/
-
-body.buddypress.activity #buddypress div.pagination .pag-count {
-	margin-left: 0;
-}
-body.buddypress.activity #buddypress div.pagination#pag-top {
-	padding-top: 0;
-}
-
-/* List ************************************/
-body.buddypress.activity #buddypress .groups.dir-list {
-  	float: left;
-  	width: 100%;
-  	margin:0;
-}
-body.buddypress.activity #buddypress #groups-list.item-list{
-	border:0;
-	float:left;
-	width:100%;	
-}
-body.buddypress.activity #buddypress #groups-list.item-list li {
-	background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
-	border: 1px solid #d9d9d9;
-	border-radius: 4px;
-	box-shadow: 0 0 6px #bebebe;
-	float: left;
-	margin-bottom: 20px;
-	margin-right: 2%;
-	padding: 18px;
-	transition: all 200ms ease 0s;
-	width: 32%;
-}
-body.buddypress.activity #buddypress #groups-list.item-list li:nth-child(3n+3){
-	margin-right:0;	
-}
-/*#buddypress #groups-list.item-list li:hover{
-	transform: scale(1.03);	
-}*/
-body.buddypress.activity #buddypress #groups-list.item-list li .item-avatar {
-	position: relative;
-	overflow: hidden;
-	width: 100%;
-	margin-bottom: 12px;
-}
-body.buddypress.activity #buddypress #groups-list.item-list li .item-avatar > a{
-	display: table;
-    float: none;
-    margin: 0 auto;
-}
-body.buddypress.activity #buddypress #groups-list.item-list li .item-avatar img.avatar {
-	border: 4px solid #eee;
-	border-radius: 4px;
-	box-shadow: 0 0 2px #333;
-	float: none;
-	margin: 2px 0 4px;
-}
-body.buddypress.activity #buddypress #groups-list.item-list li div.item,
-body.buddypress.activity #buddypress #groups-list.item-list li div.action{
-	float: left;
-    width: 100%;
-}
-body.buddypress.activity #buddypress #groups-list.item-list li div.item {
-  	left: 0;
-  	margin-left: 0;
-  	position: relative;
-}
-/* Groups List Items */
-body.buddypress.activity #buddypress #groups-list.item-list li div.item div.item-title,
-body.buddypress.activity #buddypress #groups-list.item-list li div.item div.item-meta,
-#body.buddypress.activity buddypress #groups-list.item-list li div.item div.item-desc{
-	float: none;
-    text-align: center;
-    width: 100%;	
-}
-/* Group Title */
-body.buddypress.activity #buddypress #groups-list.item-list li div.item div.item-title{
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 19px;
-	width: 100%;
-	margin: 0 auto 10px;
-}
-body.buddypress.activity #buddypress #groups-list.item-list li div.item div.item-title a{
-	color: #4a4a4a;
-    display: block;
-    font-size: 110%;
-    font-weight: 600;
-    overflow: hidden;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 100%;	
-}/*End Group Title*/
-
-
-/* Group Meta */
-body.buddypress.activity #buddypress #groups-list.item-list li div.item div.item-meta {
-	line-height: 1;
-	opacity: 1;
-	margin-top: 2.5px;
-}
-body.buddypress.activity #buddypress #groups-list.item-list li div.item div.item-meta span.activity {
-	background-color: transparent;
-	border: 0 none;
-	border-radius: 2px;
-	color: #666;
-	display: table;
-	font-size: 12px;
-	font-style: italic;
-	font-weight: normal;
-	margin: 0 auto;
-	padding: 3px 4px;
-}
-/* End Group Meta */
-body.buddypress.activity #buddypress #groups-list.item-list li div.item div.item-desc{
-	
-}
-body.buddypress.activity #buddypress #groups-list.item-list li div.item div.item-desc p{
-	color: #9b9b9b;
-    margin-bottom: 16px;
-    padding: 0 10px;
-	font-size:12px;	
-}
-/* Group Action */
-body.buddypress.activity #buddypress #groups-list.item-list li div.action {
-  	bottom: 0;
-  	margin: 0;
-  	right: 0;
-  	top: auto;
-}
-body.buddypress.activity #buddypress ul#groups-list.item-list li div.action div.group-button.generic-button,
-body.buddypress.activity #buddypress ul#groups-list.item-list li div.action div.meta{
-	width:100%;
-	float:left;
-	margin: 0 0 10px 0;	
-}
-body.buddypress.activity #buddypress ul#groups-list.item-list li div.action div.group-button.generic-button a.group-button.leave-group,
-body.buddypress.activity #buddypress ul#groups-list.item-list li div.action div.group-button.generic-button a.group-button.join-group{
-	display: table;
-	border-radius:4px;
-    float: none;
-    font-size: 11px;
-    line-height: 18px;
-    margin: 0 auto;
-    padding: 2px 8px;
-    width: auto;
-}
-body.buddypress.activity #buddypress .action .generic-button a:focus, 
-body.buddypress.activity #buddypress .action .generic-button a:hover, 
-body.buddypress.activity #buddypress div.activity-meta a.button:focus, 
-body.buddypress.activity #buddypress div.activity-meta a.button:hover{
-	background-color: #d22f37;
-	color: #fff;
-}
-body.buddypress.activity #buddypress ul#groups-list.item-list li div.action div.meta {
-	font-size: 11px;
-	margin-top: 0;
-	text-align: center;
-	color:#9b9b9b;
-	padding: 0;
-}
-/* End Group Action */
-body.buddypress.activity #buddypress #groups-list.item-list li .gp-group-box {
-	width: 210px;
-	margin: 0 auto;
-}
-body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li {
-	width: 18.4%;
-}
-body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li:nth-of-type(5n) {
-	margin-right: 0;
-}
-body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li:nth-of-type(5n+1) {
-	clear: left;
-}   
-body.buddypress.activity.sb-left #buddypress #groups-list.item-list li,
-body.buddypress.activity.sb-right #buddypress #groups-list.item-list li,
-.sb-both #buddypress #groups-list.item-list li {
-	width: 48%;
-}
-body.buddypress.activity.sb-left #buddypress #groups-list.item-list li:nth-of-type(2n),
-body.buddypress.activity.sb-right #buddypress #groups-list.item-list li:nth-of-type(2n),
-.sb-both #buddypress #groups-list.item-list li:nth-of-type(2n) {
-	margin-right: 0;
-}
-body.buddypress.activity.sb-left #buddypress #groups-list.item-list li:nth-of-type(2n+1),
-body.buddypress.activity.sb-right #buddypress #groups-list.item-list li:nth-of-type(2n+1),
-body.buddypress.activity.sb-both #buddypress #groups-list.item-list li:nth-of-type(2n+1) {
-	clear: left;
-}
-/*#buddypress #activity-stream .load-more:focus a, 
-body.buddypress.activity #buddypress #activity-stream .load-more:hover a, 
-body.buddypress.activity #buddypress ul.item-list li .item span.activity, 
-body.buddypress.activity #buddypress ul.item-list li div.action .meta, 
-.buddypress.activity.bp-user #buddypress #message-thread #message-recipients, 
-.buddypress.activity.bp-user #buddypress .pag-count{
-	font-style:normal;	
-}*/
-
-
-body.buddypress.activity #groups-list .item-avatar .group-button {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	white-space: nowrap;
-}
-    
-/* Create group ************************************/
-
-body.buddypress.activity#buddypress #group-create-body .left-menu img {
-	margin-bottom: 20px;
-}
-body.buddypress.activity #buddypress form.standard-form .main-column {
-	margin-left: 230px;
-}
-body.buddypress.activity #buddypress div.bp-avatar-nav {
-	margin-top: 30px;
-}
-body.buddypress.activity #buddypress #drag-drop-area {
-	border-width: 2px;
-}
-
-/* Invite list ************************************/
-
-body.buddypress.activity #buddypress div#invite-list {
-	padding: 20px;
-	width: 230px;
-}
-body.buddypress.activity .group-invites #buddypress form.standard-form .main-column {
-	margin-left: 250px;
-}
-
-/* Single group ************************************/
-
-body.buddypress.activity #buddypress div#item-header .page-title {
-	margin: 0;
-	width: 75%;
-}
-body.buddypress.activity #buddypress div#item-header .gp-entry-title {
-	font-size: 30px;
-	line-height: 40px;
-}
-
-/* Members Tab ************************************/
-
-body.buddypress.activity #buddypress ul.item-list h5 {
-	margin: 0;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 19px;
-}
-body.buddypress.activity #buddypress ul.item-list h5 .small .button {
-	font-size: 10px;
-	padding: 5px;
-	margin-top: 3px;
-}
-
-
-/*--------------------------------------------------------------
-BuddyPress Members Page
---------------------------------------------------------------*/
-body.buddypress.activity #buddypress ul.item-list li div.action {
-	float: none;
-	margin-top: 10px;
-}
-
-/* List ************************************/
-body.buddypress.activity.members #buddypress #admins-list li, 
-body.buddypress.activity #buddypress #members-list li, 
-body.buddypress.activity #buddypress #mods-list li {
-	background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
-    border-bottom: 1px solid #d9d9d9;
-    float: left;
-    margin-right: 0;
-    padding: 10px 0;
-    transition: all 200ms ease 0s;
-    width: 100%;
-}
-body.buddypress.activity #buddypress #admins-list li:nth-child(3n+3), 
-body.buddypress.activity #buddypress #members-list li:nth-child(3n+3), 
-body.buddypress.activity #buddypress #mods-list li:nth-child(3n+3) {
-	margin-right: 0;
-}
-body.buddypress.activity #buddypress #members-list li div.item-avatar,
-body.buddypress.activity #buddypress #members-list li div.item,
-body.buddypress.activity #buddypress #members-list li div.action{
-	float:left;
-	margin:0;
-	padding:0;
-	left:0;	
-}
-/* Item  Avatar*/
-body.buddypress.activity #buddypress ul#members-list.item-list li div.item-avatar{
-	margin-right: 2%;
-    width: auto;	
-}
-body.buddypress.activity #buddypress ul#members-list.item-list li div.item-avatar > a {
-	float: left;
-    margin: 0 auto;
-    padding: 1px;
-    width: 100%;
-}
-#buddypress #activity-stream li .activity-avatar a img.avatar {
-	border: 4px solid #eee;
-	border-radius: 4px;
-	box-shadow: 0 0 2px #333;
-	display: inline;
-	float: none;
-	height: 60px;
-	margin-bottom: 20px;
-	margin-left: 3px;
-	width: 60px;
-}
-body.buddypress.activity #buddypress ul#members-list.item-list li div.item-avatar > a img.avatar {
-	border: 4px solid #eee;
-    border-radius: 2px;
-    box-shadow: 0 0 2px #333;
-    float: left;
-	display:block;
-	margin-bottom:0;
-}
-/* Item  Details and Actions*/
-body.buddypress.activity #buddypress #members-list li div.item, 
-body.buddypress.activity #buddypress #members-list li div.item div.item-meta,
-body.buddypress.activity #buddypress #members-list li div.action{
-    width: 200px;
-}
-body.buddypress.activity #buddypress #members-list li div.item,
-body.buddypress.activity #buddypress #members-list li div.item div.item-meta{
-	float: left;	
-}
-body.buddypress.activity #buddypress #members-list li div.action {
-    float: right;
-}
-body.buddypress.activity #buddypress #members-list li div.item div.item-title {
-    clear: both;
-    float: left;
-    width: 260px;
-}
-body.buddypress.activity #buddypress #members-list li div.item div.item-title a {
-    color: #4a4a4a;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 24px;
-}
-body.buddypress.activity #buddypress #members-list li div.item .item-title a, 
-body.buddypress.activity #buddypress #members-list li div.item .item-meta span {
-  	display: block;
-    margin: 0 auto;
-    width: auto;
-}
-body.buddypress.activity #buddypress #members-list li div.item .item-meta span {
-	background-color: transparent;
-    border: 0 none;
-    color: #666666;
-    font-size: 12px;
-    font-style: italic;
-    font-weight: normal;
-    line-height: 20px;
-    padding: 0;
-    width: 100%;
-}
-body.buddypress.activity #buddypress #members-list li div.action div.friendship-button {
-    clear: both;
-    margin: 0;
-    width: 100%;
-}
-body.buddypress.activity #buddypress #members-list li div.action div.friendship-button a.friendship-button {
-	background: #f14e56 none repeat scroll 0 0;
-	border: 0 none;
-	border-radius: 4px;
-	color: #fff;
-	display: inline-block;
-	float: right;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 22px;
-	padding: 4px 12px;
-	position: relative;
-	width: auto;
-}
-body.buddypress.activity #buddypress #members-list li div.action div.friendship-button a.friendship-button:hover{
-	background-color: #d22f37;
-	color: #fff;
-}
 /* Item  */
 body.buddypress.activity.members #buddypress .members.dir-list {
   	float: left;
@@ -1024,22 +625,6 @@ body.buddypress.activity #buddypress #members-dir-list #pag-bottom.pagination{
 	margin-top: 20px;
 }
 
-/* Profile page ************************************/
-
-body.buddypress.activity #buddypress .profile .bp-widget h2 {
-	font-size: 16px;
-	line-height: 24px;
-	background-color: #F14E56;
-}
-body.buddypress.activity.bp_members .page-title {
-	display: none;
-}
-body.buddypress.activity #buddypress #profile-edit-form ul.button-nav {
-	margin-left: 0;
-}
-body.buddypress.activity #buddypress table.profile-fields {
-	border: 0;
-}
 
 /* Notifications/Messages ************************************/
 
@@ -1120,7 +705,7 @@ body.buddypress.activity.bp-user #buddypress #message-threads.sitewide-notices t
 	font-size: 14px;
 	margin:0;
 }
-body.buddypress.bp-user #buddypress #message-threads.sitewide-notices td:nth-child(2) p{
+body.buddypress.activity.bp-user #buddypress #message-threads.sitewide-notices td:nth-child(2) p{
 	margin:10px 0;
 	padding: 0 0 0 16px;	
 }
@@ -1180,9 +765,6 @@ body.buddypress.activity #buddypress ul#activity-stream.item-list li.mimi {
 }
 body.buddypress.activity #buddypress ul#activity-stream.item-list li img.avatar {
 	margin-right: 15px;
-}
-body.buddypress.activity #buddypress ul#activity-stream.activity-list .activity-content {
-	margin-left: 73px;
 }
 body.buddypress.activity #buddypress ul#activity-stream.activity-list .activity-content blockquote,
 body.buddypress.activity #buddypress ul#activity-stream.activity-list .activity-content blockquote a {
@@ -1273,16 +855,17 @@ body.buddypress.activity #buddypress .activity-list.comments-disabled .activity-
 body.buddypress.activity #buddypress .activity-list.comments-disabled .activity-comments {
 	display: none;
 }
-body.buddypress.activity #buddypress #activity-stream .activity-content div.activity-meta a.button {
+body.buddypress.activity #buddypress #activity-stream .activity-content div.activity-meta a.button, body.buddypress.activity #buddypress #activity-stream .activity-comments ul > li a.acomment-reply, body.buddypress.activity #buddypress #activity-stream .activity-comments ul > li a.acomment-delete {
 	background-color: #f14e56;
 	border-radius: 4px;
 	display: inline-block;
 	font-family: Helvetica,Arial,sans-serif;
-	font-size: 12px;
-	margin: 0 0 2px;
-	padding: 2px 8px;
-	position: relative;
+	font-size: 11px;
 	letter-spacing: 0.4px;
+	margin: 13px 0 2px;
+	padding: 0 6px;
+	position: relative;
+	font-weight: normal;
 }
 body.buddypress.activity #buddypress div.activity-meta a.button:hover{
 	background-color: #d22f37;	
@@ -1298,27 +881,19 @@ body.buddypress.activity #buddypress .activity-list a.bp-primary-action span {
 	border-radius: 0px;
 	background: none;
 }
-body.buddypress.activity #buddypress div#object-nav.item-list-tabs ul li.current a, 
-body.buddypress.activity #buddypress div#object-nav.item-list-tabs ul li.selected a, 
-body.buddypress.activity #buddypress div#object-nav.item-list-tabs ul li a:hover span{
-	background-color:transparent;
-	color: #F14E56;
-	opacity: 1;	
-}
 body.buddypress.activity #buddypress div#subnav.item-list-tabs ul li.current a, 
 body.buddypress.activity #buddypress div#subnav.item-list-tabs ul li.selected a, 
 body.buddypress.activity #buddypress div#subnav.item-list-tabs ul li a:hover span{
-	background-color: #fff;
-	color: #e93100;	
+	background-color: #F14E56;
+	color: #fff;	
 }
-body.buddypress.activity #buddypress div.item-list-tabs ul li a:hover span {
-	border: 1px solid #fff;	
-}
+
 /* Comment reply form ***
 *********************************/
 
 body.buddypress.activity #buddypress #activity-stream .activity-comments {
-	margin:0;	
+	margin-left:30px;
+	border-left: 0;	
 }
 body.buddypress.activity #buddypress div.activity-comments form .ac-textarea > textarea {
 	color: #999;
@@ -1380,7 +955,8 @@ body.buddypress.activity #buddypress .activity .acomment-options a {
 	margin-right: 0;
 	border-radius: 0px;
 }
-body.buddypress.activity  #buddypress #activity-stream .activity-comments ul a,
+body.buddypress.activity  #buddypress #activity-stream .activity-comments ul a.acomment-reply,
+body.buddypress.activity  #buddypress #activity-stream .activity-comments ul a.acomment-delete,
 body.buddypress.activity #buddypress #activity-stream .activity-comments .ac-form input[type="submit"]{
 	color: #fff;
 }
@@ -1402,6 +978,17 @@ body.buddypress.activity #buddypress div.activity-comments form div.ac-reply-con
 }
 
 /* Load more button ************************************/
+#buddypress #activity-stream .load-more{
+	border:0;	
+}
+#buddypress #activity-stream .load-more a{
+	color:#F14E56;
+}
+#buddypress #activity-stream .load-more:focus, 
+#buddypress #activity-stream .load-more:hover{
+	border:0;
+	font-style:italic;	
+}
 body.buddypress.activity #buddypress .activity-list li.load-more,
 body.buddypress.activity #buddypress .activity-list li.load-newest {
 	padding: 0;
@@ -1438,22 +1025,6 @@ body.buddypress.activity #buddypress .activity-list li.load-more.loading a {
 }
 
 
-/*--------------------------------------------------------------
-BuddyPress rtMedia plugin
---------------------------------------------------------------*/
-
-.rtmedia-gallery-item-actions a:hover {
-	color: #fff;
-}
-.rtmedia-actions-before-comments .rtmedia-comment-link,
-body.buddypress.activity #buddypress .rtmedia-actions-before-comments .rtmedia-like,
-.rtmedia-actions-before-comments .rtmedia-comment-link:hover,
-body.buddypress.activity #buddypress .rtmedia-actions-before-comments .rtmedia-like:hover {
-	background-color: transparent;
-	color: #000;
-}
-
-
 /*--------------------------------------------------------------------------------------
 
 2 - Widgets
@@ -1480,20 +1051,14 @@ body.buddypress.activity #buddypress li.groups-members-search form input[type="t
 }
 body.buddypress.activity #buddypress div.dir-search form input[type="submit"], 
 body.buddypress.activity #buddypress div.dir-search form input[type="text"], 
-body.buddypress.activity #buddypress div.message-search form input[type="submit"],
-body.buddypress.activity #buddypress div.message-search form input[type="text"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="text"],
 body.buddypress.activity #buddypress div.dir-search form #members_search_submit,
-body.buddypress.activity #buddypress div.dir-search input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search input[type="submit"], 
+body.buddypress.activity #buddypress div.dir-search input[type="submit"],  
 body.buddypress.activity #buddypress div#subnav.item-list-tabs .message-search input[type="submit"] {
 	
 	line-height:24px;
 }
 body.buddypress.activity #buddypress div.dir-search form input[type="submit"],
 body.buddypress.activity #buddypress div.message-search form input[type="submit"],
-body.buddypress.activity #buddypress li.groups-members-search form input[type="submit"],
 body.buddypress.activity #buddypress div.dir-search input[type="submit"],  
 body.buddypress.activity #buddypress div#subnav.item-list-tabs .message-search input[type="submit"] {
 	line-height: 26px;
@@ -1518,7 +1083,7 @@ body.buddypress.activity .widget.buddypress div.item-options a {
 	color: #fff;
 	display: inline-block;
 	font-size: 11px;
-	font-weight: bold;
+	font-weight: normal;
 	letter-spacing: 0.3px;
 	line-height: 1;
 	margin: 0 2px 2px 0;
@@ -1635,18 +1200,6 @@ body.buddypress.activity .widget.buddypress span.activity {
 	opacity: 1;
 	padding: 3px 4px;
 }
-/*#buddypress #groups-list.item-list li .meta,
-body.buddypress.activity #buddypress span.highlight {
-padding: 4px 8px;
-line-height: 1;
-color: #fff;
-font-weight: bold;
-display: inline-block;
-font-size: 10px;
-border-radius: 0px;
-background-color: #E47070;    
-opacity: 1;
-}*/
 
 /*--------------------------------------------------------------
 BuddyPress Recently Active Members/Who's Online Widgets
@@ -1689,329 +1242,111 @@ body.buddypress.activity .widget.widget_etivite_bp_community_stats_widget li .co
 3 - Media Queries
 
 --------------------------------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-Smaller desktops
---------------------------------------------------------------*/
-
-@media only screen and (max-width: 1260px) {
-
-	body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li {
-		width: 23.5%;
-	}
-	body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li:nth-of-type(5n) {
-		margin-right: 2%;
-	}
-	body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li:nth-of-type(5n+1) {
-		clear: none;
-	}
-	body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li:nth-of-type(4n) {
-		margin-right: 0;
-	}
-	body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li:nth-of-type(4n+1) {
-		clear: left;
-	}
-
-}
-
-/*--------------------------------------------------------------
-Tablet (landscape)
---------------------------------------------------------------*/
-
-@media only screen and (max-width: 1082px) { 
-
-	body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li {
-		width: 32%;	
-	}
-	body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li:nth-of-type(4n) {
-		margin-right: 2%;
-	}
-	body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li:nth-of-type(4n+1) {
-		clear: none;
-	}
-	body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li:nth-of-type(3n) {
-		margin-right: 0;
-	}
-	body.buddypress.activity.fullwidth #buddypress #groups-list.item-list li:nth-of-type(3n+1) {
-		clear: left;
-	}
-body.buddypress.activity #buddypress div.dir-search form, 
-body.buddypress.activity #buddypress div.message-search form, 
-body.buddypress.activity #buddypress li.groups-members-search form{
-		width:50%;
-		border:0;
-	}
-	body.buddypress.activity #buddypress  div.dir-search form input#members_search[type="text"] {
-		border: 1px solid #ccc;
-		font-size: 12px;
-		line-height: 22px;
-		padding: 4px 10px;
-	}
-body.buddypress.activity #buddypress div.dir-search form input[type="submit"], 
-body.buddypress.activity #buddypress div.dir-search form input[type="text"], 
-body.buddypress.activity #buddypress div.message-search form input[type="submit"],
-body.buddypress.activity #buddypress div.message-search form input[type="text"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="text"],
-body.buddypress.activity #buddypress div.dir-search form #members_search_submit,
-body.buddypress.activity #buddypress div.dir-search input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search input[type="submit"], 
-body.buddypress.activity #buddypress div#subnav.item-list-tabs .message-search input[type="submit"]{
-		border: 1px solid #2f9bc1;
-		line-height:24px;
-	}
-
-}
-
-/*--------------------------------------------------------------
-Tablet (portrait)
---------------------------------------------------------------*/
-
-@media only screen and (max-width: 1023px) {
-body.buddypress.activity #buddypress #groups-list.item-list li {
-		width: 48% !important;
-	}
-body.buddypress.activity #buddypress #groups-list.item-list li:nth-of-type(3n) {
-		margin-right: 2% !important;
-	}
-body.buddypress.activity #buddypress #groups-list.item-list li:nth-of-type(3n+1) {
-		clear: none !important;
-	}
-body.buddypress.activity #buddypress #groups-list.item-list li:nth-of-type(2n) {
-		margin-right: 0 !important;
-	}
-body.buddypress.activity #buddypress #groups-list.item-list li:nth-of-type(2n+1) {
-		clear: left !important;
-	}
-body.buddypress.activity #buddypress div.dir-search form, 
-body.buddypress.activity #buddypress div.message-search form, 
-body.buddypress.activity #buddypress li.groups-members-search form{
-		width:50%;
-		border:0;
-	}
-	body.buddypress.activity #buddypress  div.dir-search form input#members_search[type="text"] {
-		border: 1px solid #ccc;
-		font-size: 12px;
-		line-height: 22px;
-		padding: 4px 10px;
-	}
-body.buddypress.activity #buddypress div.dir-search form input[type="submit"], 
-body.buddypress.activity #buddypress div.dir-search form input[type="text"], 
-body.buddypress.activity #buddypress div.message-search form input[type="submit"],
-body.buddypress.activity #buddypress div.message-search form input[type="text"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="text"],
-body.buddypress.activity #buddypress div.dir-search form #members_search_submit,
-body.buddypress.activity #buddypress div.dir-search input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search input[type="submit"], 
-body.buddypress.activity #buddypress div#subnav.item-list-tabs .message-search input[type="submit"]{
-		border: 1px solid #2f9bc1;
-		line-height:25px;
-	}
-
-}
-
-/*--------------------------------------------------------------
-Small Tablet - 782 - 767px (BuddyPress division)
---------------------------------------------------------------*/
-
-@media only screen and (max-width: 782px) {
-body.buddypress.activity #buddypress #groups-list.item-list li {
-		float: left;
-		width: 50%;
-		border: 0;
-	}
-body.buddypress.activity #buddypress div#item-header #item-header-cover-image #item-header-content,
-body.buddypress.activity #buddypress div#item-header #item-header-cover-image #item-actions {
-		max-width: none !important;
-	}
-	.type-bp_members #buddypress .user-nicename {
-		margin-top: 25px !important;
-	}
-body.buddypress.activity #buddypress div.dir-search form, 
-body.buddypress.activity #buddypress div.message-search form, 
-body.buddypress.activity #buddypress li.groups-members-search form{
-		width:50%;
-		border:0;
-	}
-	body.buddypress.activity #buddypress  div.dir-search form input#members_search[type="text"] {
-		border: 1px solid #ccc;
-		font-size: 12px;
-		line-height: 22px;
-		padding: 4px 10px;
-	}
-body.buddypress.activity #buddypress div.dir-search form input[type="submit"], 
-body.buddypress.activity #buddypress div.dir-search form input[type="text"], 
-body.buddypress.activity #buddypress div.message-search form input[type="submit"],
-body.buddypress.activity #buddypress div.message-search form input[type="text"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="text"],
-body.buddypress.activity #buddypress div.dir-search form #members_search_submit,
-body.buddypress.activity #buddypress div.dir-search input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search input[type="submit"], 
-body.buddypress.activity #buddypress div#subnav.item-list-tabs .message-search input[type="submit"]{
-		border: 1px solid #2f9bc1;
-		line-height:25px;
-	}
-	
-}
-
-/*--------------------------------------------------------------
-Mobile (landscape)
---------------------------------------------------------------*/
-
-@media only screen and (max-width: 767px) {
-body.buddypress.activity #buddypress #groups-list.item-list li {
-		float: left;
-		width: 50%;
-		border: 0;
-	}
-body.buddypress.activity #buddypress div.item-list-tabs {
-		margin: 0 -20px;
-	}
-body.buddypress.activity #buddypress div.item-list-tabs ul {
-		padding: 0 15px;
-	}
-body.buddypress.activity #buddypress div#item-header .gp-entry-title {
-		width: 100%;
-	}
-body.buddypress.activity #buddypress div#item-header div#item-meta {
-		width: 100%;
-	}
-body.buddypress.activity #buddypress form#whats-new-form #whats-new-options {
-		height: auto !important;
-	}
-body.buddypress.activity #buddypress form#whats-new-form #whats-new-post-in-box {
-		width: 100%;
-	}
-body.buddypress.activity #buddypress form#whats-new-form #whats-new-submit {
-		width: 100%;
-		margin-bottom: 10px;
-	}
-body.buddypress.activity #buddypress div.dir-search {
-		position: relative;
-		margin: 0 0 40px 0;
-		float: left;
-		text-align: left;
-		width: 100%;
-	}
-body.buddypress.activity #buddypress div.dir-search form, 
-body.buddypress.activity #buddypress div.message-search form, 
-body.buddypress.activity #buddypress li.groups-members-search form{
-		width:50%;
-		border:0;
-	}
-	body.buddypress.activity #buddypress  div.dir-search form input#members_search[type="text"] {
-		border: 1px solid #ccc;
-		font-size: 12px;
-		line-height: 22px;
-		padding: 4px 10px;
-	}
-body.buddypress.activity #buddypress div.dir-search form input[type="submit"], 
-body.buddypress.activity #buddypress div.dir-search form input[type="text"], 
-body.buddypress.activity #buddypress div.message-search form input[type="submit"],
-body.buddypress.activity #buddypress div.message-search form input[type="text"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="text"],
-body.buddypress.activity #buddypress div.dir-search form #members_search_submit,
-body.buddypress.activity #buddypress div.dir-search input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search input[type="submit"], 
-body.buddypress.activity #buddypress div#subnav.item-list-tabs .message-search input[type="submit"]{
-		border: 1px solid #2f9bc1;
-		line-height:25px;
-	}
-	body.buddypress.activity #buddypress #admins-list li, 
-	body.buddypress.activity #buddypress #members-list li, 
-	body.buddypress.activity #buddypress #mods-list li{
-		width:50%;
-		margin-right:3%;	
-	}
-	body.buddypress.activity #buddypress #admins-list li:nth-child(2n+2), 
-	body.buddypress.activity #buddypress #members-list li:nth-child(2n+2), 
-	body.buddypress.activity #buddypress #mods-list li:nth-child(2n+2){
-		margin-right: 0;
-	}
-body.buddypress.activity #buddypress div.dir-search input[type=text] {
-		width: 100%;
-	}
-body.buddypress.activity #buddypress form.standard-form .left-menu,
-body.buddypress.activity #buddypress div#invite-list {
-		float: none;
-		width: 100%;
-	}
-body.buddypress.activity #buddypress form.standard-form .main-column {
-		margin-left: 0;
-	}
-	.rtmedia-plupload-container {
-    	margin-bottom: 10px;
-	}
-	
-}
 	
 /*--------------------------------------------------------------
 Mobile (portrait)
 --------------------------------------------------------------*/
 
 @media only screen and (max-width: 500px) {	
-body.buddypress.activity #buddypress #groups-list.item-list li {
+	body.buddypress.activity #buddypress div.item-list-tabs{
+		margin:0;
+	}
+	body.buddypress.activity #buddypress #object-nav{
+		background-color: #fff;
+		margin-bottom: 20px;	
+	}
+	body #buddypress #item-nav #object-nav{
+		border:1px solid #eaeaea;	
+	}
+	body.buddypress.activity #buddypress #object-nav::before{
+		opacity:1;
+		color:	#F14E56;
+	}
+	
+	body.buddypress.activity #buddypress #item-body #subnav ul li{
+		margin-bottom: 4px;
+	}
+	body.buddypress.activity #buddypress #item-body #subnav ul li a{
+		padding: 6px 0;
+		width:auto;
+		border: 2px solid #fff;
+	}
+	body.buddypress.activity #buddypress #item-body div#subnav.item-list-tabs ul li.current a, 
+	body.buddypress.activity #buddypress #item-body div#subnav.item-list-tabs ul li.selected a, 
+	body.buddypress.activity #buddypress #item-body div#subnav.item-list-tabs ul li a:hover{
+		background-color: #fff;
+		color:	#F14E56;
+		border-bottom: 2px solid #F14E56;
+		text-decoration:underline;
+	}
+	body.buddypress.activity #buddypress span.activity {
+		display: inline-block;
+		text-align: center;
+	}
+	body.buddypress.activity #buddypress #activity-stream.activity-list li .activity-content .activity-header a.activity-time-since span {
+		display: block;
+		margin-top: -30px;
+		width: 100%;
+	}
+	body.buddypress.activity #buddypress #groups-list.item-list li {
 		float: left;
 		width: 100%;
 		border: 0;
 	}
-body.buddypress.activity #buddypress #gp-bp-tabs-button {
+	body.buddypress.activity #buddypress #gp-bp-tabs-button {
 		display: block;
 		padding: 0 15px;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs {
+	body.buddypress.activity #buddypress div.item-list-tabs {
 		padding: 0;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs:not(#subnav) ul {
+	body.buddypress.activity #buddypress div.item-list-tabs:not(#subnav) ul {
 		padding: 0;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs ul li {
+	body.buddypress.activity #buddypress div.item-list-tabs ul li {
 		width: 100%;
 		margin: 0;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs ul li a {
+	body.buddypress.activity #buddypress div.item-list-tabs ul li a {
 		padding: 10px 20px;
 		border-radius: 0;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs#subnav {
+	body.buddypress.activity #buddypress div.item-list-tabs#subnav {
 		padding: 0;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs#subnav ul {
+	body.buddypress.activity #buddypress div.item-list-tabs#subnav ul {
 		padding: 0;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li {
+	body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li {
 		width: 100%;
 		margin: 0;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li a {
+	body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li a {
 		padding: 5px 20px;
 		border-radius: 0;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li.feed {
+	body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li.feed {
 		margin: 10px 0 0 0;
 		padding-left: 20px;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li.feed a {
+	body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li.feed a {
 		border-radius: 0px;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li.last {
+	body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li.last {
 		float: left;
 		margin: 10px 0 0 0;
 		padding-left: 20px;
 	}
-body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li.groups-members-search,
-body.buddypress.activity #buddypress div.item-list-tabs#subnav .message-search {
+	body.buddypress.activity #buddypress div.item-list-tabs#subnav ul li.groups-members-search,
+	body.buddypress.activity #buddypress div.item-list-tabs#subnav .message-search {
 		padding: 15px 15px 0 15px;
 		margin: 0;
 	}
-body.buddypress.activity #buddypress li.groups-members-search input[type=text],
-body.buddypress.activity #buddypress div.item-list-tabs#subnav .message-search input[type=text] {
+	body.buddypress.activity #buddypress li.groups-members-search input[type=text],
+	body.buddypress.activity #buddypress div.item-list-tabs#subnav .message-search input[type=text] {
 		width: 100%;
 	}
-body.buddypress.activity #buddypress form#whats-new-form #whats-new-options select {
+	body.buddypress.activity #buddypress form#whats-new-form #whats-new-options select {
 		margin: 0;
 	}
 	body.buddypress.activity #buddypress #admins-list li, 
@@ -2020,9 +1355,9 @@ body.buddypress.activity #buddypress form#whats-new-form #whats-new-options sele
 		width:100%;
 		margin-right:0;	
 	}
-body.buddypress.activity #buddypress div.dir-search form, 
-body.buddypress.activity #buddypress div.message-search form, 
-body.buddypress.activity #buddypress li.groups-members-search form{
+	body.buddypress.activity #buddypress div.dir-search form, 
+	body.buddypress.activity #buddypress div.message-search form, 
+	body.buddypress.activity #buddypress li.groups-members-search form{
 		width:100%;
 		border:0;
 	}
@@ -2032,54 +1367,34 @@ body.buddypress.activity #buddypress li.groups-members-search form{
 		line-height: 22px;
 		padding: 4px 10px;
 	}
-body.buddypress.activity #buddypress div.dir-search form input[type="submit"], 
-body.buddypress.activity #buddypress div.dir-search form input[type="text"], 
-body.buddypress.activity #buddypress div.message-search form input[type="submit"],
-body.buddypress.activity #buddypress div.message-search form input[type="text"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search form input[type="text"],
-body.buddypress.activity #buddypress div.dir-search form #members_search_submit,
-body.buddypress.activity #buddypress div.dir-search input[type="submit"], 
-body.buddypress.activity #buddypress li.groups-members-search input[type="submit"], 
-body.buddypress.activity #buddypress div#subnav.item-list-tabs .message-search input[type="submit"]{
+	body.buddypress.activity #buddypress div.dir-search form input[type="submit"], 
+	body.buddypress.activity #buddypress div.dir-search form input[type="text"], 
+	body.buddypress.activity #buddypress div.dir-search input[type="submit"],  
+	body.buddypress.activity #buddypress div#subnav.item-list-tabs .message-search input[type="submit"]{
 		border: 1px solid #2f9bc1;
 		line-height:25px;
 	}
-body.buddypress.activity #buddypress div.activity-comments,
-body.buddypress.activity #buddypress div.activity-comments ul li > ul {
+	body.buddypress.activity #buddypress div.dir-search form input[type="submit"], 
+	body.buddypress.activity #buddypress div.dir-search input[type="submit"],  
+	body.buddypress.activity #buddypress div#subnav.item-list-tabs .message-search input[type="submit"]{
+		width: 90px;
+		margin-right:-1px;
+		border: 1px solid #F14E56;	
+	}
+	body.buddypress.activity #buddypress div.activity-comments,
+	body.buddypress.activity #buddypress div.activity-comments ul li > ul {
 		margin-left: 0;
 		padding-left: 0;
 	}
-body.buddypress.activity #buddypress div.activity-comments ul {
+	body.buddypress.activity #buddypress div.activity-comments ul {
 		float: left;
 	}
-body.buddypress.activity #buddypress #groups-list.item-list li {
-		width: 100% !important;
-		margin-right: 0 !important;
-	}
-body.buddypress.activity #buddypress #groups-list.item-list li:nth-of-type(2n),
-body.buddypress.activity #buddypress #groups-list.item-list li:nth-of-type(5n) {
-		margin-right: 0 !important;
-	}
-body.buddypress.activity #buddypress #groups-list.item-list li:nth-of-type(2n+1),
-body.buddypress.activity #buddypress #groups-list.item-list li:nth-of-type(5n+1) {
-		clear: left !important;
-	}
-body.buddypress.activity #buddypress #groups-list.item-list li .item {
-		margin-left: 0;
-	}
-body.buddypress.activity #buddypress #groups-list.item-list li .gp-group-box div.action {
-		position: absolute;
-	}
-body.buddypress.activity #buddypress #group-create-body .left-menu img {
-		display: none;
-	}
-body.buddypress.activity #buddypress div#item-header ul li {
+	body.buddypress.activity #buddypress div#item-header ul li {
 		float: left;
 	}
-body.buddypress.activity #buddypress .standard-form #basic-details-section,
-body.buddypress.activity #buddypress .standard-form #blog-details-section,
-body.buddypress.activity #buddypress .standard-form #profile-details-section {
+	body.buddypress.activity #buddypress .standard-form #basic-details-section,
+	body.buddypress.activity #buddypress .standard-form #blog-details-section,
+	body.buddypress.activity #buddypress .standard-form #profile-details-section {
 		width: 100%;
 	}	
 	.activity-permalink #buddypress .activity-list .activity-avatar {
@@ -2097,10 +1412,10 @@ body.buddypress.activity #buddypress .standard-form #profile-details-section {
 	table.notifications td {
 		display: block;
 	}
-body.buddypress.activity #buddypress table#message-threads tr.unread td {
+	body.buddypress.activity #buddypress table#message-threads tr.unread td {
 		border-width: 0;
 	}
-body.buddypress.activity #buddypress table#message-threads tr.unread td.thread-options {
+	body.buddypress.activity #buddypress table#message-threads tr.unread td.thread-options {
 		border-bottom-width: 2px;
 	}
 
@@ -2119,66 +1434,4 @@ body.buddypress.activity #buddypress table tr td.field-name{
 	color: #F14E56;
 	font-size:14px;
 	font-weight:bold;	
-}
-/**
- *	bbpress
- */
- 
-/* Forums */
- 
-#bbpress-forums li.bbp-header {
-    background: #F14E56 none repeat scroll 0 0;
-    color: #fff;
-}
-#bbpress-forums li.bbp-body ul.bp_members li.bbp-topic-title{}
-#bbpress-forums li.bbp-body ul.bp_members li.bbp-topic-title a.bbp-topic-permalink {
-    border-bottom: 0;
-    color: #F14E56;
-	font-size: 14px;
-	font-weight: bold;
-	text-transform:capitalize;
-}
-#bbpress-forums li.bbp-body ul.bp_members li.bbp-topic-title a.bbp-topic-permalink:hover,
-#bbpress-forums li.bbp-body ul.bp_members li.bbp-topic-title a.bbp-topic-permalink:focus{
-	color: #d22f37;
-}
-#bbpress-forums li.bbp-body ul.bp_members li.bbp-topic-title p.bbp-topic-meta{}
-#bbpress-forums li.bbp-body ul.bp_members li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-by,
-#bbpress-forums li.bbp-body ul.bp_members li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-in{
-	width:auto;
-	float:left;
-	white-space:normal;	
-	margin-right: 6px;
-}
-#bbpress-forums p.bbp-topic-meta img.avatar, 
-#bbpress-forums ul.bbp-reply-revision-log img.avatar, 
-#bbpress-forums ul.bbp-topic-revision-log img.avatar, 
-#bbpress-forums div.bbp-template-notice img.avatar, 
-#bbpress-forums .widget_display_topics img.avatar, 
-#bbpress-forums .widget_display_replies img.avatar{
-	border: 3px double #ddd;
-    float: none;
-    margin-bottom: -7px;	
-}
-#bbpress-forums li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-by a.bbp-author-avatar,
-#bbpress-forums li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-by a.bbp-author-name{
-	display:inline-block;
-	width:auto;
-}
-#bbpress-forums li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-by a.bbp-author-avatar img.avatar{
-	width:auto;
-}
-#bbpress-forums li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-in{}
-
-#bbpress-forums li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-by a.bbp-author-avatar,
-#bbpress-forums li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-by a.bbp-author-name,
-#bbpress-forums li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-in a{
-	border-bottom: 0;
-	color: #F14E56;
-}
-#bbpress-forums li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-by a.bbp-author-name:hover,
-#bbpress-forums li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-by a.bbp-author-name:focus,
-#bbpress-forums li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-in a:hover,
-#bbpress-forums li.bbp-topic-title p.bbp-topic-meta span.bbp-topic-started-in a:focus{
-	color: #d22f37;
 }
